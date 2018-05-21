@@ -35,3 +35,11 @@ After you download all the required files, your directory structure will look li
         ├── gui.py                  # gui module
         ├── prepare.py              # helper module
         └── test_images.py          # testing module
+
+
+## How to run
+1.  First Run the captioning.py for training
+2.  Run test_images.py and provide a image path to test images
+3.  Run gui.py for real work testing
+
+## GUI 
