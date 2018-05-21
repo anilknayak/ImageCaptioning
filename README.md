@@ -43,3 +43,4 @@ After you download all the required files, your directory structure will look li
 3.  Run gui.py for real work testing
 
 ## GUI 
+[img](https://github.com/anilknayak/ImageCaptioning/blob/master/ipython/gui.png)
