@@ -10,7 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog
 import pyqtgraph as pg
-import text_images as caption_obj
+import test_images as caption_obj
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
