@@ -46,8 +46,8 @@ class Prepare():
 
         if load_pickle:
             print('loading from pickle file')
-            desc = load(open("description.pkl", 'rb'))
-            feature = load(open("features.pkl", 'rb'))
+            desc = load(open("pkl/description.pkl", 'rb'))
+            feature = load(open("pkl/features.pkl", 'rb'))
             self.features = feature
             self.description = desc
         else:
@@ -139,8 +139,8 @@ class Prepare():
                 self.chars.update(temp_char)
 
     def save_feature_and_description(self):
-        pickle.dump(self.description, open('description.pkl', 'wb'))
-        pickle.dump(self.features, open('features.pkl', 'wb'))
+        pickle.dump(self.description, open('pkl/description.pkl', 'wb'))
+        pickle.dump(self.features, open('pkl/features.pkl', 'wb'))
 
     def load_identifiers(self, filename):
         # used to load the training and testing files and prepare the list of image identifiers
@@ -243,7 +243,7 @@ class Prepare():
         plot_model(self.model_new, to_file='model.png', show_shapes=True)
 
     def checkpoint_prepare(self):
-        filepath = 'model-ep{epoch:03d}-loss{loss:.3f}-val_loss{val_loss:.3f}.h5'
+        filepath = 'model/model-ep{epoch:03d}-loss{loss:.3f}-val_loss{val_loss:.3f}.h5'
         self.checkpoint = ModelCheckpoint(filepath, monitor='val_loss', verbose=1, save_best_only=True, mode='min')
 
     def model_fit(self, X1, X2, Y, X1_V,X2_V, Y_V):

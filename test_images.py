@@ -32,8 +32,8 @@ class Sample():
         self.model = Model(inputs=self.model.inputs, outputs=self.model.layers[-1].output)
 
     def load_tokenizer(self):
-        self.tokenizer = load(open("tokenizer.pkl", 'rb'))
-        self.details = load(open("detail.pkl", 'rb'))
+        self.tokenizer = load(open("pkl/tokenizer.pkl", 'rb'))
+        self.details = load(open("pkl/detail.pkl", 'rb'))
         self.max_length = self.details['max_length']
         self.vocab_size = self.details['vocab_size']
 
@@ -50,7 +50,7 @@ class Sample():
         return feature
 
     def load_caption_model(self):
-        model_file = 'model-ep002-loss3.670-val_loss3.849.h5' # 'model-ep005-loss3.226-val_loss3.783.h5'
+        model_file = 'model/model-ep002-loss3.670-val_loss3.849.h5' # 'model-ep005-loss3.226-val_loss3.783.h5'
         self.caption_model = load_model(model_file)
 
     def get_work_from_index(self, pred):

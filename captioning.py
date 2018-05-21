@@ -38,8 +38,8 @@ class Captioning():
         detail = dict()
         detail['vocab_size'] = vocab_size
         detail['max_length'] = max_length
-        pickle.dump(tokenizer, open('tokenizer.pkl', 'wb'))
-        pickle.dump(detail, open('detail.pkl', 'wb'))
+        pickle.dump(tokenizer, open('pkl/tokenizer.pkl', 'wb'))
+        pickle.dump(detail, open('pkl/detail.pkl', 'wb'))
 
         X1train, X2train, ytrain = self.prepare.create_sequence(train_description, tokenizer, max_length, vocab_size, train_feature)
         X1test, X2test, ytest = self.prepare.create_sequence(test_description, tokenizer, max_length,vocab_size, test_feature)
