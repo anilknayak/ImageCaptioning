@@ -15,35 +15,23 @@ You will be receiving an email to download the dataset. There are two zip file
 ## Project Directory Structure
 After you download all the required files, your directory structure will look like
 
-
-├── ImageCaptioning
-    ├── data                    # data directory
-    │   ├── images              # All the images from flickr8k dataset
-    │   ├── caption             # captions from flickr8k dataset
-    ├── pkl                     # Pickle Files
-    │   ├── details.pkl            # Details pickle has max description length
-    │   └── features.pkl           # all image feature embedding
-    │   └── tokenizer.pkl          # tokenizer for description
-    │   └── description.pkl        # captions for each image
-    └── model
-    │   ├── model-ep002-loss3.670-val_loss3.849.h5            # model saved after epoch 2
-    │   └── model-ep005-loss3.226-val_loss3.783.h5            # model saved after epoch 5
-    └── ipython
-    │   ├── ImageCaptioning.ipynb           # ipython notebook
-    │   └── model.png                       # network model diagram
-    ├── captioning.py           # training module
-    ├── gui.py                  # gui module
-    ├── prepare.py              # helper module
-    ├── test_images.py          # testing module
-    
-
-
     .
-    ├── ...
-    ├── docs                    # Documentation files (alternatively `doc`)
-    │   ├── TOC.md              # Table of contents
-    │   ├── faq.md              # Frequently asked questions
-    │   ├── misc.md             # Miscellaneous information
-    │   ├── usage.md            # Getting started guide
-    │   └── ...                 # etc.
-    └── ...
+    ├── ImageCaptioning
+        ├── data                    # data directory
+        │   ├── images              # All the images from flickr8k dataset
+        │   └── caption             # captions from flickr8k dataset
+        ├── pkl                     # Pickle Files
+        │   ├── details.pkl            # Details pickle has max description length
+        │   └── features.pkl           # all image feature embedding
+        │   └── tokenizer.pkl          # tokenizer for description
+        │   └── description.pkl        # captions for each image
+        └── model
+        │   ├── model-ep002-loss3.670-val_loss3.849.h5            # model saved after epoch 2
+        │   └── model-ep005-loss3.226-val_loss3.783.h5            # model saved after epoch 5
+        └── ipython
+        │   ├── ImageCaptioning.ipynb           # ipython notebook
+        │   └── model.png                       # network model diagram
+        ├── captioning.py           # training module
+        ├── gui.py                  # gui module
+        ├── prepare.py              # helper module
+        └── test_images.py          # testing module
