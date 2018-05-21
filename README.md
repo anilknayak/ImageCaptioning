@@ -44,4 +44,4 @@ After you download all the required files, your directory structure will look li
 
 ## GUI 
 
-(https://github.com/anilknayak/ImageCaptioning/blob/master/ipython/gui.png)
+![image GUI](https://github.com/anilknayak/ImageCaptioning/blob/master/ipython/gui.png)
