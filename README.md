@@ -14,7 +14,7 @@ You will be receiving an email to download the dataset. There are two zip file
 
 ## Project Directory Structure
 After you download all the required files, your directory structure will look like
-
+.
 ├── ImageCaptioning
     ├── data                    # data directory
     │   ├── images              # All the images from flickr8k dataset
