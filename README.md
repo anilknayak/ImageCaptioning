@@ -36,3 +36,12 @@ After you download all the required files, your directory structure will look li
     ├── test_images.py          # testing module
     
 
+.
+    ├── ...
+    ├── docs                    # Documentation files (alternatively `doc`)
+    │   ├── TOC.md              # Table of contents
+    │   ├── faq.md              # Frequently asked questions
+    │   ├── misc.md             # Miscellaneous information
+    │   ├── usage.md            # Getting started guide
+    │   └── ...                 # etc.
+    └── ...
