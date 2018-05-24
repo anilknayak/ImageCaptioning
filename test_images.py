@@ -33,6 +33,7 @@ class Sample():
 
     def load_tokenizer(self):
         self.tokenizer = load(open("pkl/tokenizer.pkl", 'rb'))
+        self.tokenizer.oov_token = None
         self.details = load(open("pkl/detail.pkl", 'rb'))
         self.max_length = self.details['max_length']
         self.vocab_size = self.details['vocab_size']
@@ -79,7 +80,7 @@ class Sample():
 
 if __name__ == '__main__':
     s = Sample()
-    image_path = 'data/example.jpg'
+    image_path = 'test/example.jpg'
     caption = s.get_caption(image_path)
     image = cv2.imread(image_path)
 
@@ -87,6 +88,6 @@ if __name__ == '__main__':
     caption = caption.replace('endseq', '')
 
     cv2.putText(image, caption, (10, image.shape[0]-100), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 1, cv2.LINE_4)
-    cv2.imwrite("example_output.jpg", image)
+    cv2.imwrite("test/example_output.jpg", image)
     cv2.imshow("Image Captioning", image)
     cv2.waitKey(2000)
