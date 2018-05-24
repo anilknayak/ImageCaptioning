@@ -33,6 +33,8 @@ class Sample():
 
     def load_tokenizer(self):
         self.tokenizer = load(open("pkl/tokenizer.pkl", 'rb'))
+        #See: https://stackoverflow.com/questions/49861842/attributeerror-tokenizer-object-has-no-attribute-oov-token-in-keras
+        self.tokenizer.oov_token = None
         self.details = load(open("pkl/detail.pkl", 'rb'))
         self.max_length = self.details['max_length']
         self.vocab_size = self.details['vocab_size']
